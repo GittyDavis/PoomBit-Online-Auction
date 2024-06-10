@@ -1,0 +1,122 @@
+/* Basic styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #2a0d4b;
+    background-color: #f1efe7;
+}
+
+container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Horizontally centers content within the form */
+    min-height: 20vh;
+    padding: 10px; /* Add padding for space around the form elements */
+    gap: 10px;
+}
+
+.items-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-button {
+    border: 3px solid #2a0d4b;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    background-color: #d27568;
+    cursor: pointer;
+    text-align: left;
+    color: #f3ebe3;
+}
+
+.item-button:hover {
+    background-color: #cc3c34;
+}
+
+.item-details{
+    border: 3px solid #2a0d4b;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 275px;
+    background-color: #f1efe7;
+    text-align: left;
+    color: #2a0d4b;
+    justify-content: center;
+    min-height: 20vh;
+    flex-direction: column;
+
+}
+
+
+/* Logo  -- maybe not necessary*/
+.logo {
+    width: 100px;
+    margin-bottom: 0;
+}
+
+.logo-small {
+    width: 80px;
+    height: 45px;
+    margin-bottom: 0;
+}
+
+
+/* Buttons */
+.btn {
+    padding: 10px; /* Existing padding for buttons */
+    width: 95px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 4px; /* Add horizontal space around each button */
+    text-align: center; /* Center the text horizontally */
+}
+.disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.pressed {
+    background-color: #ccc; /* Darker background color for pressed state */
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a shadow */
+}
+
+.blue  {
+    background-color: #2a0d4b; /* Blue color */
+    color: #f3ebe3;
+}
+
+.pink {
+    background-color: #cc3c34; /* Pink-red color */
+    color: #f3ebe3;
+}
+
+.submit {
+    background-color: #cc3c34; /* Pink-red color */
+    color: #f3ebe3;
+}
+
+.warning {
+    color: #ff0000; /* Red color for urgency */
+    font-weight: bold;
+    margin-top: 10px; /* Add some margin for spacing */
+}
