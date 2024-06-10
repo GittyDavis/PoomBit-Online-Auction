@@ -7,6 +7,7 @@ PoomBit is a web application that represents an auction system, developed with a
 
 ## Table of Contents
 
+- [Author](#author)
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
@@ -15,6 +16,12 @@ PoomBit is a web application that represents an auction system, developed with a
 - [Troubleshooting](#troubleshooting)
 - [Usage](#usage)
 - [License](#license)
+
+## Author
+
+Developed by 
+[Chani Slater ID: ]
+[Gitty Davis ID: 212878060].
 
 ## Project Structure
 
