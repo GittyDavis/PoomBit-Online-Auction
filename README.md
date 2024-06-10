@@ -1,4 +1,5 @@
 # PoomBit
+![poombit1](https://github.com/GittyDavis/PoomBit/assets/137718817/5329c131-98fc-4991-bfe0-54f56a74ae05)
 
 ## Description
 
