@@ -31,11 +31,7 @@ Ensure you have the following software installed:
 
 ## Installation
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/poombit.git
-    cd poombit
-    ```
+1. Clone the repository from link sent in invitation in email.
 
 2. Install backend dependencies:
     ```bash
@@ -91,7 +87,3 @@ To stop the servers, go back to the command prompt window where you ran `start.b
 
 1. Open a web browser and navigate to `http://localhost:3000`.
 2. Use the application to participate in auctions.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
