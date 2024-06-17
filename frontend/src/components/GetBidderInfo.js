@@ -5,11 +5,16 @@ import React, {useState, useEffect} from 'react'; // Import necessary hooks
 
 function GetBidderInfo() {
     const location = useLocation();
-    const {bidderName} = location.state;
+    const navigate = useNavigate();
+    const {userName, bidderName} = location.state;
     const [bidderDetails, setBidderDetails] = useState('');
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    const handleBackClick = (event) => {
+        event.preventDefault(); // Prevent default form submission behavior
+        navigate('/browseitems', {state: {userName}});
+    }
 
     useEffect(() => {
         const fetchBidderDetails = async () => {
@@ -38,6 +43,7 @@ function GetBidderInfo() {
                 <p>Phone Number: {bidderDetails.phone}</p>
                 <h3>Good Luck!</h3>
             </div>
+            <button onClick={handleBackClick} className="btn blue">Back</button>
         </div>
     );
 }
