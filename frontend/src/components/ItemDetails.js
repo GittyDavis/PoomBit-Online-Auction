@@ -32,7 +32,7 @@ function ItemDetails() {
 
     const handleGetInformationClick = (event) => {
         event.preventDefault(); // Prevent default form submission behavior
-        navigate(`/getbidderinfo/${auctionItem.itemId}`, {state: { bidderName: auctionItem.highestBidder}});
+        navigate(`/getbidderinfo/${auctionItem.itemId}`, {state: { userName, bidderName: auctionItem.highestBidder}});
     }
 
     return (
