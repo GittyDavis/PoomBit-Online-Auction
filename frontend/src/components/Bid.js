@@ -42,7 +42,8 @@ function Bid() {
             {error && <div>{error}</div>}
             {userName ? ( // Render form only if user is logged in
                 <div className={'form'}>
-                    <h2>Place Bid</h2>
+                    <h2>Place Your Bid</h2>
+                    <p>The last bid is ${lastPrice}</p>
                     <form className={'form'} onSubmit={handleBidSubmit} >
                         <label htmlFor="newPrice">Enter your bid:</label>
                         <input type="number" id="newPrice" value={newPrice}
