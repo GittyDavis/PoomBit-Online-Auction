@@ -81,7 +81,8 @@ public class ApplicationManager {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Auction not found");
         }
 
-        if (auction.getCurrentPrice() >= newPrice) {
+        //Checking whether the new price is at least 5% higher than the current price:
+        if (auction.getCurrentPrice() + auction.getCurrentPrice()/20 > newPrice) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("New price must be greater than current price");
         } else {
             auction.setCurrentPrice(Double.valueOf(newPrice));
