@@ -125,10 +125,11 @@ function BrowseItems() {
                             className={isUserSalesActive ? 'active pressed' : 'pressed'}
                             onClick={onSalesSelect}
                             className={'btn pink'}
+                            style={{width: 120}}
                         >{salesButtonText}</button>
                         <div className="items-list">
                             {filteredItems.map((auctionItem) => (
-                                <button key={auctionItem.auctionId} className="item-button"
+                                <button key={auctionItem.auctionId} className={auctionItem.isClosed? "item-button passed" : "item-button"}
                                         onClick={() => handleItemClick(auctionItem)}>
                                     <h3>{auctionItem.name}</h3>
                                     <p>Starting Price: {auctionItem.startingPrice}</p>
