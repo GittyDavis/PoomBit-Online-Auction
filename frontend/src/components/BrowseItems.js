@@ -17,6 +17,7 @@ function BrowseItems() {
     const location = useLocation();
     const {userName} = location.state || {};
 
+
     useEffect(() => {
         const fetchItemsAndCategories = async () => {
             try {
@@ -38,6 +39,19 @@ function BrowseItems() {
         fetchItemsAndCategories();
     }, []);
 
+    const handleSellClick = (event) => {
+        event.preventDefault();
+        navigate('/sellitem', {state: {userName: userName}});
+    }
+
+    if(auctionItems.length == 0)
+    {
+        return <div className={'form'}>
+            <h2> Repository is empty. Would you like to add an item? </h2>
+            <button onClick={handleSellClick} className="btn pink">Sell Item</button>
+        </div>
+    }
+
     const handleItemClick = (auctionItem) => {
         console.log('Item clicked:', auctionItem);
         navigate(`/item/${auctionItem.itemId}`, {state: {userName, auctionItem}});
@@ -48,10 +62,6 @@ function BrowseItems() {
         navigate(`/logout/${userName}`, {state: {userName}});
     };
 
-    const handleSellClick = (event) => {
-        event.preventDefault();
-        navigate('/sellitem', {state: {userName: userName}});
-    }
 
     // Function to handle category selection (defined within the component)
     const onCategorySelect = (category) => {
