@@ -56,8 +56,8 @@ function ItemDetails() {
                         <p style={{color: '#cc3c34'}}>This is your own item. You have no permittion to bid it</p>
                         {isTimePassed && (
                             <div>
-                                <p>This auction has ended</p>
-                                <button onClick={handleGetInformationClick} className={'btn pink'}>Get Bidder
+                                <h3>This auction has ended</h3>
+                                <button style={{width: 150}} onClick={handleGetInformationClick} className={'btn pink'}>Get Bidder
                                     information
                                 </button>
                             </div>)}
