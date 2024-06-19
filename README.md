@@ -7,7 +7,6 @@ PoomBit is a web application that represents an auction system, developed with a
 
 ## Table of Contents
 
-- [Author](#author)
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
@@ -16,12 +15,7 @@ PoomBit is a web application that represents an auction system, developed with a
 - [Troubleshooting](#troubleshooting)
 - [Usage](#usage)
 - [License](#license)
-
-## Author
-
-Developed by 
-[Chani Slater ID: 213258775]
-[Gitty Davis ID: 212878060].
+- [Author](#author)
 
 ## Project Structure
 
@@ -95,3 +89,9 @@ To stop the servers, go back to the command prompt window where you ran `start.b
 
 1. Open a web browser and navigate to `http://localhost:3000`.
 2. Use the application to participate in auctions.
+
+## Author
+
+Developed by 
+[Chani Slater]
+[Gitty Davis].
