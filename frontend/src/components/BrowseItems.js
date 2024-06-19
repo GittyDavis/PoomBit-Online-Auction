@@ -44,7 +44,7 @@ function BrowseItems() {
         navigate('/sellitem', {state: {userName: userName}});
     }
 
-    if(auctionItems.length == 0)
+    if(auctionItems.length === 0)
     {
         return <div className={'form'}>
             <h2> Repository is empty. Would you like to add an item? </h2>
