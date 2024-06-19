@@ -95,11 +95,6 @@ container {
     opacity: 0.6;
 }
 
-.pressed {
-    background-color: #ccc; /* Darker background color for pressed state */
-    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a shadow */
-}
-
 .blue  {
     background-color: #2a0d4b; /* Blue color */
     color: #f3ebe3;
