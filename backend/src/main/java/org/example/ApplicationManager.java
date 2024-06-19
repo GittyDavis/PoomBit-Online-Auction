@@ -124,26 +124,6 @@ public class ApplicationManager {
         }
     }
 
-    @PostMapping("/getItemsByCategory")
-    private ResponseEntity<List<AuctionItemDTO>> getItemsByCategory(@RequestBody String categoryName) {
-        List<AuctionItemDTO> auctionItemDTOs = new ArrayList<>();
-        for (Item item : itemsRepository.getItemsByCategory(categoryName)) {
-            Auction auction = auctionsRepository.findAuctionByIsClosedFalseAndItemFk(item.getId());
-            auctionItemDTOs.add(new AuctionItemDTO(auction, item));
-        }
-        return new ResponseEntity<>(auctionItemDTOs, HttpStatus.OK);
-    }
-
-    @PostMapping("/getUserSales")
-    private ResponseEntity<List<AuctionItemDTO>> getUserSales(@RequestBody String sellerName) {
-        List<AuctionItemDTO> auctionItemDTOs = new ArrayList<>();
-        for (Item item : itemsRepository.findItemsBySellerUser(sellerName)) {
-            Auction auction = auctionsRepository.findAuctionByItemFk(item.getId());
-            auctionItemDTOs.add(new AuctionItemDTO(auction, item));
-        }
-        return new ResponseEntity<>(auctionItemDTOs, HttpStatus.OK);
-    }
-
     @GetMapping("/getCategories")
     public ResponseEntity<List<String>> getCategories() {
         // Implement logic to fetch category names from your database
