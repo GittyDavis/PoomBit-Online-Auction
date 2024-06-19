@@ -28,26 +28,6 @@ container {
     gap: 10px;
 }
 
-.items-list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.item-button {
-    border: 3px solid #2a0d4b;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    width: 200px;
-    background-color: #d27568;
-    cursor: pointer;
-    text-align: left;
-    color: #f3ebe3;
-}
-
-.item-button:hover {
-    background-color: #cc3c34;
-}
 
 .item-details{
     border: 3px solid #2a0d4b;
@@ -110,8 +90,3 @@ container {
     color: #f3ebe3;
 }
 
-.warning {
-    color: #ff0000; /* Red color for urgency */
-    font-weight: bold;
-    margin-top: 10px; /* Add some margin for spacing */
-}
