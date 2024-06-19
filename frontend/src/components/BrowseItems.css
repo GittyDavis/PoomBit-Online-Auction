@@ -8,7 +8,30 @@
     border-right: 1px solid #ddd;
 }
 
+
 .items-list {
-    flex: 1;
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.item-button {
+    border: 3px solid #2a0d4b;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    background-color: #d27568;
+    cursor: pointer;
+    text-align: left;
+    color: #f3ebe3;
+}
+
+.passed {
+    background-color: gray;
+}
+
+
+.item-button:hover {
+    background-color: #cc3c34;
+}
+
