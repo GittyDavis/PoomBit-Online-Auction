@@ -26,7 +26,7 @@ function Bid() {
 
         } catch (error) {
             if (error.response.status === 400) {
-                alert('Your bid must be higher than the last bid: '+ lastPrice);
+                alert('Your bid must be higher in 5% than the last bid. Minimum price: '+ (lastPrice+lastPrice/20));
             } else {
                 alert('Failed to place bid. Please try again.');
             }
