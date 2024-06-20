@@ -39,6 +39,14 @@ function BrowseItems() {
         fetchItemsAndCategories();
     }, []);
 
+     if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>{error}</div>;
+    }
+
     const handleSellClick = (event) => {
         event.preventDefault();
         navigate('/sellitem', {state: {userName: userName}});
@@ -85,14 +93,6 @@ function BrowseItems() {
             return item.category === selectedCategory && item.isClosed === false;
         }
     });
-
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-
-    if (error) {
-        return <div>{error}</div>;
-    }
 
     return (
         <div>
