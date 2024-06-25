@@ -1,5 +1,5 @@
 # PoomBit
-![poombit1](https://github.com/GittyDavis/PoomBit/assets/137718817/5329c131-98fc-4991-bfe0-54f56a74ae05)
+![עיצוב ללא שם (1)](https://github.com/GittyDavis/PoomBit-Online-Auction/assets/137718817/7734d63e-959b-41b0-bdd9-b0b9a6b63141)
 
 ## Description
 
