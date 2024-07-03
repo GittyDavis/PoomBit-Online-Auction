@@ -41,6 +41,9 @@ function Signup() {
             console.error('Error signing up', error);
             if (error.response && error.response.status === 409) {
                 alert('Username already exists. Please choose a different username.');
+            }
+            if (error.response && error.response.status === 402) {
+                alert('Invalid password. \nPassword include at least 8 characters. at least 2 English letters and 2 numbers');
             } else {
                 alert('Sign up failed. Please try again.');
             }
