@@ -28,6 +28,9 @@ public class ApplicationManager {
 
     @PostMapping("/signup")
     public ResponseEntity<String> signUp(@RequestBody AuctionUser user) {
+        String password = user.getPassword();
+        if (!isValidPassword(password))
+            return ResponseEntity.status(402).body("Invalid Password!");
         if (usersRepository.findAuctionUserByUserName(user.getUserName()).isEmpty()) {
             usersRepository.save(user);
             return ResponseEntity.ok("Account created");
@@ -153,5 +156,15 @@ public class ApplicationManager {
                 auction.setIsClosed(true);
             auctionsRepository.save(auction);
         }
+    }
+
+    public static boolean isValidPassword(String password) {
+        if (password.length() < 8) return false;
+        int letterCount = 0, digitCount = 0;
+        for (char c : password.toCharArray()) {
+            if (Character.isLetter(c)) letterCount++;
+            else if (Character.isDigit(c)) digitCount++;
+        }
+        return letterCount >= 2 && digitCount >= 2;
     }
 }
